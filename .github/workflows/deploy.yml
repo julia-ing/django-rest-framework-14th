@@ -22,10 +22,13 @@ jobs:
         key: ${{ secrets.KEY }}
         script: mkdir -p /home/ubuntu/srv/ubuntu
 
-    - name: create file
+    - name: create test directory
       run: |
-        touch hi.txt
-        echo "hi test file" >> hi.txt
+        mkdir -p /home/test
+
+    - name: create test2 directory
+      run: |
+        mkdir -p /home/ubuntu/test2
 
     - name: copy source via ssh key
       uses: burnett01/rsync-deployments@4.1
