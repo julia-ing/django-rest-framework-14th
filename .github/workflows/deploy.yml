@@ -24,11 +24,7 @@ jobs:
 
     - name: create test directory
       run: |
-        sudo mkdir -p /home/test
-
-    - name: create test2 directory
-      run: |
-        sudo mkdir -p /home/ubuntu/test2
+        sudo mkdir -p test
 
     - name: copy source via ssh key
       uses: burnett01/rsync-deployments@4.1
