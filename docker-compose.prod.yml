@@ -12,7 +12,7 @@ services:
     env_file:
       - .env
     volumes:
-      - static:/home/app/web/static
+      - staticfiles:/home/app/web/staticfiles
       - media:/home/app/web/media
     expose:
       - 8000
@@ -24,7 +24,7 @@ services:
     container_name: nginx
     build: ./config/nginx
     volumes:
-      - static:/home/app/web/static
+      - staticfiles:/home/app/web/staticfiles
       - media:/home/app/web/media
     ports:
       - "80:80"
